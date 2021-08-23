@@ -1,0 +1,268 @@
+//@at-root
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+$Primary_colour: #660885;
+$Secondary_colour: #bd00ff;
+$Background_color: #270e2d;
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+input {
+  outline: none;
+}
+
+body {
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  padding-top: 10%;
+  padding-left: 10%;
+  position: relative;
+  background-color: #270e2d;
+  height: 100vh;
+  .wave2,
+  .wave1 {
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+  }
+
+  #hero {
+    width: 50%;
+    z-index: 10;
+    img {
+      transform: translateX(2rem);
+    }
+  }
+  h1 {
+    color: rgb(201, 201, 201);
+    padding: 0 2rem;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  h2 {
+    margin-top: 0.8rem;
+    color: rgb(201, 201, 201);
+    font-weight: 500;
+    padding: 0 2rem;
+    font-size: 1.3rem;
+  }
+}
+
+section {
+  min-height: 100vh;
+  background-color: $Secondary_colour;
+}
+
+i {
+  margin: 0 0.125rem;
+}
+
+nav {
+  width: 100vw;
+  font-size: 1rem;
+  color: white;
+  justify-content: space-between;
+  padding: 1rem 5vw;
+  display: flex;
+  position: fixed;
+  z-index: 10000;
+
+  #logo {
+    background-color: $Secondary_colour;
+    padding: 0.125rem 0.45rem;
+    border-radius: 10000000px;
+  }
+
+  ul {
+    list-style: none;
+
+    display: flex;
+    li {
+      margin: 0 0.5rem;
+      border-bottom: 2px dashed $Secondary_colour;
+      &:last-child {
+        // background-color: black;
+        border: none;
+
+        padding: 0.125 1rem;
+        border-radius: 10000px;
+      }
+    }
+  }
+}
+
+#hero > .box {
+  margin-top: 1rem;
+  position: relative;
+  .topLong {
+    top: 0;
+    width: 10rem;
+    height: 0.6rem;
+    background-color: $Secondary_colour;
+    position: absolute;
+  }
+  .leftTop {
+    height: 3rem;
+    width: 0.6rem;
+    position: absolute;
+    background-color: $Secondary_colour;
+    top: 0;
+  }
+  .topSmall {
+    position: absolute;
+    width: 2rem;
+    height: 0.6rem;
+    background-color: $Secondary_colour;
+    top: 0rem;
+    left: 10.5rem;
+  }
+  .bottomLong {
+    position: absolute;
+    background-color: $Secondary_colour;
+    width: 10rem;
+    height: 0.6rem;
+    bottom: 0;
+    right: 0;
+  }
+  .bottomSmall {
+    position: absolute;
+    background-color: $Secondary_colour;
+    width: 0.6rem;
+    height: 3rem;
+    right: 0;
+    left: 100%;
+    bottom: 0;
+  }
+  .leftBottom {
+    position: absolute;
+    background-color: $Secondary_colour;
+    width: 2rem;
+    height: 0.6rem;
+    right: 10.5rem;
+    bottom: 0;
+  }
+}
+
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.space {
+  height: 2rem;
+}
+
+#hero button {
+  cursor: pointer;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  background-color: $Secondary_colour;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 100000000px;
+  box-shadow: 0px 10px 4px 2px rgb(14, 14, 14);
+  i {
+    margin-left: 0.5rem;
+  }
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+
+    span {
+      color: #660885;
+    }
+    span.line {
+      margin: 0 0.3rem;
+      display: inline-block;
+      width: 3rem;
+      height: 0.2rem;
+
+      background-color: #660885;
+    }
+  }
+}
+
+.cards {
+  display: grid;
+  justify-content: center;
+  column-gap: 20px;
+  grid-template-columns: repeat(3, 15rem);
+  .card {
+    cursor: pointer;
+    height: 20rem;
+    background-color: $Background_color;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    .img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: gray;
+      margin-bottom: 1.5rem;
+    }
+    .name {
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+    .line {
+      width: 90%;
+      height: 0.3rem;
+      border: 0.5px solid transparent;
+      border-top-color: $Primary_colour;
+      border-bottom-color: $Primary_colour;
+    }
+    p {
+      padding: 0.5rem 1.5rem;
+      text-align: center;
+      color: rgb(226, 225, 225);
+      font-size: 0.8rem;
+    }
+  }
+}
+
+footer {
+  height: 5rem;
+  background-color: $Secondary_colour;
+  border-top: 1px solid white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 5vw;
+  i {
+    font-size: 2rem;
+    color: black;
+    cursor: pointer;
+  }
+}
